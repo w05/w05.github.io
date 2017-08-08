@@ -11,13 +11,13 @@
 <meta property="og:url" content="http://yoursite.com/2017/08/08/note/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="文件流、网络操作、服务端Web开发基础文件操作文件监视利用文件监视实现自动 markdown 文件转换 相关链接：  https://github.com/chjj/marked https://github.com/Browsersync/browser-sync    实现思路：  利用fs模块的文件监视功能监视指定MD文件 当文件发生变化后，借助marked包提供的markdown to h">
-<meta property="og:image" content="http://yoursite.com/2017/08/01.png">
-<meta property="og:image" content="http://yoursite.com/2017/08/02.png">
-<meta property="og:updated_time" content="2017-08-08T16:06:39.679Z">
+<meta property="og:image" content="http://yoursite.com/2017/08/images/01.png">
+<meta property="og:image" content="http://yoursite.com/2017/08/images/02.png">
+<meta property="og:updated_time" content="2017-08-08T16:10:35.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node服务器端开发">
 <meta name="twitter:description" content="文件流、网络操作、服务端Web开发基础文件操作文件监视利用文件监视实现自动 markdown 文件转换 相关链接：  https://github.com/chjj/marked https://github.com/Browsersync/browser-sync    实现思路：  利用fs模块的文件监视功能监视指定MD文件 当文件发生变化后，借助marked包提供的markdown to h">
-<meta name="twitter:image" content="http://yoursite.com/2017/08/01.png">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/images/01.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -106,7 +106,7 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"><span class="keyword">var</span> marked = <span class="built_in">require</span>(<span class="string">'marked'</span>);</div><div class="line"><span class="keyword">var</span> bs = <span class="built_in">require</span>(<span class="string">'browser-sync'</span>).create();</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> target = path.join(__dirname, process.argv[<span class="number">2</span>] || <span class="string">'./README.md'</span>);</div><div class="line"><span class="keyword">var</span> filename = path.basename(target, path.extname(target)) + <span class="string">'.html'</span>;</div><div class="line"><span class="keyword">var</span> targetHtml = path.join(path.dirname(target), filename);</div><div class="line"></div><div class="line">bs.init(&#123;</div><div class="line">  server: path.dirname(target),</div><div class="line">  index: filename,</div><div class="line">  notify: <span class="literal">false</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">bs.reload(filename);</div><div class="line"></div><div class="line"><span class="keyword">var</span> template = <span class="string">`&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="string">&lt;html lang="en"&gt;</span></div><div class="line"><span class="string">&lt;head&gt;</span></div><div class="line"><span class="string">  &lt;meta charset="UTF-8"&gt;</span></div><div class="line"><span class="string">  &lt;title&gt;&lt;/title&gt;</span></div><div class="line"><span class="string">  &lt;style&gt;&#123;&#123;&#123;styles&#125;&#125;&#125;&lt;/style&gt;</span></div><div class="line"><span class="string">&lt;/head&gt;</span></div><div class="line"><span class="string">&lt;body&gt;</span></div><div class="line"><span class="string">  &lt;article class="markdown"&gt;</span></div><div class="line"><span class="string">    &#123;&#123;&#123;body&#125;&#125;&#125;</span></div><div class="line"><span class="string">  &lt;/article&gt;</span></div><div class="line"><span class="string">&lt;/body&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div><div class="line"><span class="string">`</span>;</div><div class="line"></div><div class="line">fs.readFile(path.join(__dirname, <span class="string">'./markdown.css'</span>), <span class="string">'utf8'</span>, (error, css) =&gt; &#123;</div><div class="line">  <span class="keyword">if</span> (error) <span class="keyword">throw</span> error;</div><div class="line">  template = template.replace(<span class="string">'&#123;&#123;&#123;styles&#125;&#125;&#125;'</span>, css);</div><div class="line">  <span class="keyword">var</span> handler = <span class="function">(<span class="params">current, previous</span>) =&gt;</span> &#123;</div><div class="line">    fs.readFile(target, <span class="string">'utf8'</span>, (error, content) =&gt; &#123;</div><div class="line">      <span class="keyword">var</span> html = template.replace(<span class="string">'&#123;&#123;&#123;body&#125;&#125;&#125;'</span>, marked(content));</div><div class="line">      fs.writeFile(targetHtml, html, (error) =&gt; &#123;</div><div class="line">        <span class="keyword">if</span> (!error) &#123;</div><div class="line">          <span class="built_in">console</span>.log(<span class="string">`updated@<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>()&#125;</span>`</span>);</div><div class="line">          bs.reload(filename);</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">    &#125;);</div><div class="line">  &#125;;</div><div class="line">  handler();</div><div class="line">  fs.watchFile(target, &#123; <span class="attr">interval</span>: <span class="number">100</span> &#125;, handler);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <hr>
-<h2 id="文件流"><a href="#文件流" class="headerlink" title="文件流"></a>文件流</h2><h3 id="什么是流"><a href="#什么是流" class="headerlink" title="什么是流"></a>什么是流</h3><p><img src="../../01.png" alt="二进制的世界"></p>
+<h2 id="文件流"><a href="#文件流" class="headerlink" title="文件流"></a>文件流</h2><h3 id="什么是流"><a href="#什么是流" class="headerlink" title="什么是流"></a>什么是流</h3><p><img src="../../images/01.png" alt="二进制的世界"></p>
 <ul>
 <li><p>现实过程的流</p>
 <ul>
@@ -121,7 +121,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="Node中的流操作"><a href="#Node中的流操作" class="headerlink" title="Node中的流操作"></a>Node中的流操作</h3><p><img src="../../02.png" alt="流的操作"></p>
+<h3 id="Node中的流操作"><a href="#Node中的流操作" class="headerlink" title="Node中的流操作"></a>Node中的流操作</h3><p><img src="../../images/02.png" alt="流的操作"></p>
 <p>在 Node 核心模块 fs 中定义了一些与流相关的 API</p>
 <ul>
 <li>fs.createReadStream()<ul>
@@ -167,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/08/note/" data-id="cj63rup2d0000roo01oxfimpl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/08/08/note/" data-id="cj63s581b0000u4o0ffh1k8w6" class="article-share-link">Share</a>
       
       
     </footer>
