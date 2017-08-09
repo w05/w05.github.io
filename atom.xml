@@ -1,340 +1,28 @@
-<!DOCTYPE html>
-
-
-
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Wengthon的个人博客</title>
+  <subtitle>前端技术博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
   
-
-
-<html class="theme-next gemini use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <link href="http://yoursite.com/"/>
+  <updated>2017-08-09T06:41:36.128Z</updated>
+  <id>http://yoursite.com/</id>
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+  <author>
+    <name>Wengthon</name>
     
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ajax学习笔记</title>
+    <link href="http://yoursite.com/2017/08/09/Ajax/"/>
+    <id>http://yoursite.com/2017/08/09/Ajax/</id>
+    <published>2017-08-08T16:00:00.000Z</published>
+    <updated>2017-08-09T06:41:36.128Z</updated>
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Ajax," />
-
-
-
-
-  
-
-
-  <link rel="alternate" href="/atom.xml" title="Wengthon的个人博客" type="application/atom+xml" />
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="Ajaxget和post方式的简单说明get方式格式：协议 + 主机地址 + 资源路径 + ? + 参数1 &amp;amp; 参数2 &amp;amp; 参数3 1.  参数的处理方式  ==&amp;gt; 在URL后面 2.  大小的限制   ==&amp;gt;   有限制 3.  安全性     ==&amp;gt;  较差 4.  通过$_GET 获取信息 post 方式格式：协议 + 主机地址 + 资源路径 1. 参数的处">
-<meta name="keywords" content="Ajax">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Ajax学习笔记">
-<meta property="og:url" content="http://yoursite.com/2017/08/09/Ajax/index.html">
-<meta property="og:site_name" content="Wengthon的个人博客">
-<meta property="og:description" content="Ajaxget和post方式的简单说明get方式格式：协议 + 主机地址 + 资源路径 + ? + 参数1 &amp;amp; 参数2 &amp;amp; 参数3 1.  参数的处理方式  ==&amp;gt; 在URL后面 2.  大小的限制   ==&amp;gt;   有限制 3.  安全性     ==&amp;gt;  较差 4.  通过$_GET 获取信息 post 方式格式：协议 + 主机地址 + 资源路径 1. 参数的处">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-09T06:41:36.128Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ajax学习笔记">
-<meta name="twitter:description" content="Ajaxget和post方式的简单说明get方式格式：协议 + 主机地址 + 资源路径 + ? + 参数1 &amp;amp; 参数2 &amp;amp; 参数3 1.  参数的处理方式  ==&amp;gt; 在URL后面 2.  大小的限制   ==&amp;gt;   有限制 3.  安全性     ==&amp;gt;  较差 4.  通过$_GET 获取信息 post 方式格式：协议 + 主机地址 + 资源路径 1. 参数的处">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2017/08/09/Ajax/"/>
-
-
-
-
-
-  <title>Ajax学习笔记 | Wengthon的个人博客</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Wengthon的个人博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle">前端技术博客</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/09/Ajax/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wengthon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wengthon的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Ajax学习笔记</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-09T00:00:00+08:00">
-                2017-08-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h1><h2 id="get和post方式的简单说明"><a href="#get和post方式的简单说明" class="headerlink" title="get和post方式的简单说明"></a>get和post方式的简单说明</h2><h3 id="get方式"><a href="#get方式" class="headerlink" title="get方式"></a>get方式</h3><pre><code>格式：协议 + 主机地址 + 资源路径 + ? + 参数1 &amp; 参数2 &amp; 参数3
+    <content type="html"><![CDATA[<h1 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h1><h2 id="get和post方式的简单说明"><a href="#get和post方式的简单说明" class="headerlink" title="get和post方式的简单说明"></a>get和post方式的简单说明</h2><h3 id="get方式"><a href="#get方式" class="headerlink" title="get方式"></a>get方式</h3><pre><code>格式：协议 + 主机地址 + 资源路径 + ? + 参数1 &amp; 参数2 &amp; 参数3
 1.  参数的处理方式  ==&gt; 在URL后面
 2.  大小的限制   ==&gt;   有限制
 3.  安全性     ==&gt;  较差
@@ -662,358 +350,51 @@ window.location.hash = &quot;3&quot;
 </code></pre></li>
 </ul>
 </blockquote>
-
-      
-    </div>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Ajax&quot;&gt;&lt;a href=&quot;#Ajax&quot; class=&quot;headerlink&quot; title=&quot;Ajax&quot;&gt;&lt;/a&gt;Ajax&lt;/h1&gt;&lt;h2 id=&quot;get和post方式的简单说明&quot;&gt;&lt;a href=&quot;#get和post方式的简单说明&quot; class=&quot;header
+    
+    </summary>
     
     
+      <category term="Ajax" scheme="http://yoursite.com/tags/Ajax/"/>
     
-
+  </entry>
+  
+  <entry>
+    <title>常见的代码托管平台</title>
+    <link href="http://yoursite.com/2017/08/09/%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0/"/>
+    <id>http://yoursite.com/2017/08/09/代码托管平台/</id>
+    <published>2017-08-08T16:00:00.000Z</published>
+    <updated>2017-08-09T05:30:52.388Z</updated>
     
-
+    <content type="html"><![CDATA[<p>1、GitHub</p>
+<p>关于GItHub相信大家都有耳闻，我就不详细介绍了。GitHub地址：<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></p>
+<p>2、Gitlab</p>
+<p>对于有些人，提到GitHub就会自然的想到Gitlab,Gitlab支持无限的公有项目和私有项目。Gitlab地址：<a href="https://about.gitlab.com/" target="_blank" rel="external">https://about.gitlab.com/</a></p>
+<p>3、Bitbucket</p>
+<p>bitbucket 免费支持5个开发成员的团队创建无限私有代码托管库 。bitbucket地址：<a href="https://bitbucket.org/" target="_blank" rel="external">https://bitbucket.org/</a></p>
+<p>4、(推荐)开源中国代码托管</p>
+<p>前面说的都是国外的，下面来说几个国内的。开源中国一个账号最多可以创建1000个项目，包含公有和私有，开源中国代码托管地址：<a href="http://git.oschina.net/" target="_blank" rel="external">http://git.oschina.net/</a></p>
+<p>开源中国在几个月前又发布了团队协作开发平台，和代码托管平台一起，打造了一个十分好的团队开发平台，开源中国团队协作平台地址：<a href="http://team.oschina.net/，团队协作平台支持任务的创建、讨论、便签等，如图：" target="_blank" rel="external">http://team.oschina.net/，团队协作平台支持任务的创建、讨论、便签等，如图：</a></p>
+<p>5、(推荐)coding.net</p>
+<p>谈到coding.net,首先必须提的是速度快，功能与开源中国相似，同样一个账号最多可以创建1000个项目，也支持任务的创建等。coding.net地址：<a href="https://coding.net/home.html，其首页如图：" target="_blank" rel="external">https://coding.net/home.html，其首页如图：</a></p>
+<p>6、CSDN代码托管</p>
+<p>CSDN代码托管地址：<a href="https://code.csdn.net/" target="_blank" rel="external">https://code.csdn.net/</a></p>
+]]></content>
     
-
+    <summary type="html">
     
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Ajax/" rel="tag"># Ajax</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/08/09/代码托管平台/" rel="next" title="常见的代码托管平台">
-                <i class="fa fa-chevron-left"></i> 常见的代码托管平台
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
+      &lt;p&gt;1、GitHub&lt;/p&gt;
+&lt;p&gt;关于GItHub相信大家都有耳闻，我就不详细介绍了。GitHub地址：&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/&lt;/a&gt;&lt;/
     
-  </div>
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
+    </summary>
     
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/uploads/avatar.jpg"
-               alt="Wengthon" />
-          <p class="site-author-name" itemprop="name">Wengthon</p>
-           
-              <p class="site-description motion-element" itemprop="description">作为个人技术博客，主要记录和总结前端工作中常用的知识及在开发过程中遇到的问题</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">标签</span>
-              
-            </div>
-          
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax"><span class="nav-number">1.</span> <span class="nav-text">Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#get和post方式的简单说明"><span class="nav-number">1.1.</span> <span class="nav-text">get和post方式的简单说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#get方式"><span class="nav-number">1.1.1.</span> <span class="nav-text">get方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#post-方式"><span class="nav-number">1.1.2.</span> <span class="nav-text">post 方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单提交和ajax请求的区别"><span class="nav-number">1.2.</span> <span class="nav-text">表单提交和ajax请求的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决安全问题-加密"><span class="nav-number">1.3.</span> <span class="nav-text">解决安全问题-加密</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#消息摘要算法-哈希算法-散列计算-–-gt-MD5-sha256"><span class="nav-number">1.3.1.</span> <span class="nav-text">消息摘要算法(哈希算法|散列计算) –>MD5 | sha256</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密算法"><span class="nav-number">1.3.2.</span> <span class="nav-text">对称加密算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密算法"><span class="nav-number">1.3.3.</span> <span class="nav-text">非对称加密算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#证书-https"><span class="nav-number">1.3.4.</span> <span class="nav-text">证书-https</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传的知识点"><span class="nav-number">1.4.</span> <span class="nav-text">文件上传的知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大文件上传的知识点"><span class="nav-number">1.5.</span> <span class="nav-text">大文件上传的知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#大文件上传需要配置服务器端的环境"><span class="nav-number">1.5.1.</span> <span class="nav-text">大文件上传需要配置服务器端的环境</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-number">1.6.</span> <span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#请求的状态"><span class="nav-number">1.6.1.</span> <span class="nav-text">请求的状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的状态码"><span class="nav-number">1.6.2.</span> <span class="nav-text">常见的状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决浏览器缓存问题"><span class="nav-number">1.6.3.</span> <span class="nav-text">解决浏览器缓存问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET请求参数中文的问题"><span class="nav-number">1.6.4.</span> <span class="nav-text">GET请求参数中文的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#请求超时处理"><span class="nav-number">1.6.5.</span> <span class="nav-text">请求超时处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#post请求"><span class="nav-number">1.6.6.</span> <span class="nav-text">post请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#REQUEST"><span class="nav-number">1.6.7.</span> <span class="nav-text">$_REQUEST</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装AJAX"><span class="nav-number">1.7.</span> <span class="nav-text">封装AJAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery-Ajax"><span class="nav-number">1.8.</span> <span class="nav-text">jQuery Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#get-post"><span class="nav-number">1.8.1.</span> <span class="nav-text">$.get/$.post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax"><span class="nav-number">1.8.2.</span> <span class="nav-text">$.ajax</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS中JSON的处理"><span class="nav-number">1.9.</span> <span class="nav-text">JS中JSON的处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP中JSON的处理"><span class="nav-number">1.10.</span> <span class="nav-text">PHP中JSON的处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP文件中的处理"><span class="nav-number">1.11.</span> <span class="nav-text">PHP文件中的处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XML数据处理"><span class="nav-number">1.12.</span> <span class="nav-text">XML数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON数据处理"><span class="nav-number">1.13.</span> <span class="nav-text">JSON数据处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建JS代码模板"><span class="nav-number">1.14.</span> <span class="nav-text">创建JS代码模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式1-原生模板"><span class="nav-number">1.14.1.</span> <span class="nav-text">方式1:原生模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式2-基础模板"><span class="nav-number">1.14.2.</span> <span class="nav-text">方式2:基础模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的存储技术"><span class="nav-number">1.15.</span> <span class="nav-text">常见的存储技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie存储"><span class="nav-number">1.15.1.</span> <span class="nav-text">cookie存储</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie的设置和使用"><span class="nav-number">1.15.1.1.</span> <span class="nav-text">cookie的设置和使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sessionStorage存储"><span class="nav-number">1.15.2.</span> <span class="nav-text">sessionStorage存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localStorage存储"><span class="nav-number">1.15.3.</span> <span class="nav-text">localStorage存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hash简单介绍"><span class="nav-number">1.15.4.</span> <span class="nav-text">hash简单介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用程序缓存"><span class="nav-number">1.15.5.</span> <span class="nav-text">应用程序缓存</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现跨域网络访问-script实现"><span class="nav-number">1.16.</span> <span class="nav-text">实现跨域网络访问  script实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery-jsonp实现"><span class="nav-number">1.17.</span> <span class="nav-text">jQuery jsonp实现</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Wengthon</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Gemini
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
-
-  </div>
-
+  </entry>
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
+</feed>
